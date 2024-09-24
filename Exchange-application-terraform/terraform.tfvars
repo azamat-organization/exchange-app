@@ -1,0 +1,6 @@
+region        = "us-east-1"
+vpc_cidr      = "172.16.0.0/16"
+hosted_zone   = "Z07997593O3D18490RD5Y"
+db_secret_url = "exchangeapp-secret-url"
+frontend-ami  = "ami-06d130065c075f624"
+backend-ami   = "ami-0c51b5ce2a6216a2f"

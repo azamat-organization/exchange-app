@@ -1,0 +1,17 @@
+[Unit]
+Description=Exchange Web App
+After=cloud-final.service
+
+[Service]
+WorkingDirectory=/home/ec2-user/web
+ExecStart=/usr/bin/node /home/ec2-user/web/bin/www
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=exchangeapp-web-app
+User=ec2-user
+EnvironmentFile=/home/ec2-user/web/app.env
+
+[Install]
+WantedBy=multi-user.target

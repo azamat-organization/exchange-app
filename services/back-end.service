@@ -1,0 +1,17 @@
+[Unit]
+Description=Exchange Api App
+After=cloud-final.service
+
+[Service]
+WorkingDirectory=/home/ec2-user/api
+ExecStart=/usr/bin/node /home/ec2-user/api/bin/www
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=exchangeapp-api-app
+User=ec2-user
+EnvironmentFile=/home/ec2-user/api/app.env
+
+[Install]
+WantedBy=multi-user.target
